@@ -44,6 +44,11 @@ const questions = [
         type: 'input',
         message: 'What is your email address',
         name: 'email'
+    },
+    {
+        type: 'input',
+        message: 'What is the local file path where you would like to save this file?',
+        name: 'filePath'
     }
 ];
 
@@ -60,7 +65,11 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer
         .prompt(questions)
-        .then(writeToFile)
+        .then((data) => {
+            let fileName = 'DEARME.md'
+                //`${data.filePath}./READEME.md`
+            writeToFile(fileName, data)
+        })
 }
 
 // Function call to initialize app
