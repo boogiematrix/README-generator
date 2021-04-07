@@ -1,14 +1,23 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+// https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
+function renderLicenseBadge(license) {
+  return `![${license} badge](https://img.shields.io/badge/license-${license.split(' ').join('_')}-green)`
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// https://github.com/microsoft/<REPONAME>/blob/main/LICENSE.txt
+function renderLicenseLink(data, license) {
+  return `[${license.split}](https://github.com/microsoft/${data.title}/blob/main/LICENSE.txt)`
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// Licensed under the <LICENSE> license
+function renderLicenseSection(data, license) {
+  return `Licensed under the ${renderLicenseLink(data, license)} license`
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -16,7 +25,7 @@ function generateMarkdown(data) {
   
   return `# ${data.title}
   ## Description
-  ${renderLicenseBadge(license)}
+  ${renderLicenseBadge(license)}<br/>
   ${data.description}
   
   ## Table of Contents
@@ -32,8 +41,8 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   ## License
-  ${renderLicenseLink(license)}
-  ${renderLicenseSection(license)}
+ 
+  ${renderLicenseSection(data, license)}
   
   ## Contributing
 ${data.contribution}
@@ -41,8 +50,8 @@ ${data.contribution}
 ${data.test}
   ## Questions
   Feel free to contact me with any questions
-[My github](https://github.com/${data.github})
-email: ${data.email}
+* [My github](https://github.com/${data.github})
+* email: ${data.email}
 `;
 }
 

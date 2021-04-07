@@ -1,6 +1,7 @@
-# p
+# t
   ## Description
-  undefined
+  ![MIT badge](https://img.shields.io/badge/license-MIT-green)<br/>
+  t
   
   ## Table of Contents
   1. [Installation](#Installation)
@@ -11,18 +12,18 @@
   6. [Questions](#Questions)
   
   ## Installation
-  p
+  t
   ## Usage
-  p
+  t
   ## License
-  undefined
-  undefined
+ 
+  Licensed under the [MIT](https://github.com/microsoft/t/blob/main/LICENSE.txt) license
   
   ## Contributing
-undefined
+t
   ## Tests
-p
+t
   ## Questions
   Feel free to contact me with any questions
-[My github](https://github.com/p)
-email: p
+* [My github](https://github.com/t)
+* email: t

@@ -11,6 +11,11 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'Give a description of your project',
+        name: 'description'
+    },
+    {
+        type: 'input',
         message: 'installation instructions',
         name: 'installation'
     },
@@ -23,7 +28,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What type of license would you like to use?',
-        choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License']
+        choices: ['Apache 2.0', 'GNU General Public v3.0', 'MIT']
     },
     {
         type: 'input',
