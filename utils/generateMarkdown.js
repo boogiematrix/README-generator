@@ -2,6 +2,9 @@
 // If there is no license, return an empty string
 // https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
 function renderLicenseBadge(license) {
+  if (license === 'none') {
+    return ``;
+  }
   return `![${license} badge](https://img.shields.io/badge/license-${license.split(' ').join('_')}-green)`
 }
 
@@ -16,7 +19,12 @@ function renderLicenseLink(data, license) {
 // If there is no license, return an empty string
 // Licensed under the <LICENSE> license
 function renderLicenseSection(data, license) {
-  return `Licensed under the ${renderLicenseLink(data, license)} license`
+  if (license === 'none') {
+    return ``;
+  }
+  return `## License
+  
+  Licensed under the ${renderLicenseLink(data, license)} license`
 }
 
 // TODO: Create a function to generate markdown for README
@@ -37,11 +45,14 @@ function generateMarkdown(data) {
   6. [Questions](#Questions)
   
   ## Installation
-  ${data.installation}
+  \`\`\`
+  ${ data.installation }
+  \`\`\`
   ## Usage
+  \`\`\`
   ${data.usage}
-  ## License
- 
+  \`\`\`
+
   ${renderLicenseSection(data, license)}
   
   ## Contributing

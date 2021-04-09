@@ -16,19 +16,19 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'installation instructions',
+        message: 'command line installation instructions',
         name: 'installation'
     },
     {
         type: 'input',
-        message: 'Provide instructions for use',
+        message: 'Provide instructions for use in the command line',
         name: 'usage'
     },
     {
         type: 'list',
         name: 'license',
         message: 'What type of license would you like to use?',
-        choices: ['Apache 2.0', 'GNU General Public v3.0', 'MIT']
+        choices: ['Apache 2.0', 'GNU General Public v3.0', 'MIT', 'none']
     },
     {
         type: 'input',
@@ -37,7 +37,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What are your instructions for testing?',
+        message: 'What are some tests for your project?',
         name: 'test'
     },
     {
@@ -50,11 +50,6 @@ const questions = [
         message: 'What is your email address',
         name: 'email'
     },
-    {
-        type: 'input',
-        message: 'What is the local file path where you would like to save this file?',
-        name: 'filePath'
-    }
 ];
 
 // TODO: Create a function to write README file
