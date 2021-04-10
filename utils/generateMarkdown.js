@@ -58,7 +58,9 @@ function generateMarkdown(data) {
   ## Contributing
 ${data.contribution}
   ## Tests
+  \`\`\`
 ${data.test}
+  \`\`\`
   ## Questions
   Feel free to contact me with any questions
 * [My github](https://github.com/${data.github})
