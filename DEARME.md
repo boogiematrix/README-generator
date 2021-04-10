@@ -1,7 +1,8 @@
-# t
+# yoda
   ## Description
   ![MIT badge](https://img.shields.io/badge/license-MIT-green)<br/>
-  t
+  a picture of yoda<br/>
+  ![Demo](https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg)
   
   ## Table of Contents
   1. [Installation](#Installation)
@@ -12,18 +13,25 @@
   6. [Questions](#Questions)
   
   ## Installation
-  t
+  ```
+  npm install yoda
+  ```
   ## Usage
-  t
+  ```
+  node index.js
+  ```
+
   ## License
- 
-  Licensed under the [MIT](https://github.com/microsoft/t/blob/main/LICENSE.txt) license
+  
+  Licensed under the [MIT](https://github.com/microsoft/yoda/blob/main/LICENSE.txt) license
   
   ## Contributing
-t
+Feel free to fix anything you want
   ## Tests
-t
+  ```
+describe('yoda', () => {}
+  ```
   ## Questions
   Feel free to contact me with any questions
-* [My github](https://github.com/t)
-* email: t
+* [My github](https://github.com/memo)
+* email: meme

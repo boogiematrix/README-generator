@@ -15,6 +15,19 @@ const questions = [
         name: 'description'
     },
     {
+        type: 'confirm',
+        message: 'Would you like to include a demo screenshot or video?(y/n)',
+        name: 'confirm'
+    }, 
+    {
+        type: 'input',
+        name: 'screenshot',
+        message: 'Paste the image url here',
+        when: function (answers) {
+            return answers.confirm;
+        }
+    },
+    {
         type: 'input',
         message: 'command line installation instructions',
         name: 'installation'
