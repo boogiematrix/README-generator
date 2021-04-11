@@ -8,7 +8,13 @@ function renderLicenseBadge(license) {
 
 // function that returns the license link
 function renderLicenseLink(data, license) {
-  return `[${license}](https://github.com/microsoft/${data.title.split(' ').join('_')}/blob/main/LICENSE.txt)`
+  if (license === 'MIT') {
+    return `[${license}](https://choosealicense.com/licenses/mit/)`
+  } else if (license === 'Apache 2.0') {
+    return `[${license}](https://choosealicense.com/licenses/apache-2.0/)`
+  } else {
+    return `[${license}](https://choosealicense.com/licenses/gpl-3.0/)`
+  }
 }
 
 // function that returns the license section of README
