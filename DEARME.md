@@ -29,9 +29,10 @@
 Feel free to fix anything you want
   ## Tests
   ```
-describe('yoda', () => {}
+  npm install yoda
+npm test
   ```
   ## Questions
   Feel free to contact me with any questions
 * [My github](https://github.com/memo)
-* email: meme
+* email: meme@memail.com

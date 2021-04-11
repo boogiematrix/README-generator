@@ -1,6 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-// https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
+// function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if (license === 'none') {
     return ``;
@@ -8,16 +6,12 @@ function renderLicenseBadge(license) {
   return `![${license} badge](https://img.shields.io/badge/license-${license.split(' ').join('_')}-green)`
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// https://github.com/microsoft/<REPONAME>/blob/main/LICENSE.txt
+// function that returns the license link
 function renderLicenseLink(data, license) {
-  return `[${license}](https://github.com/microsoft/${data.title}/blob/main/LICENSE.txt)`
+  return `[${license}](https://github.com/microsoft/${data.title.split(' ').join('_')}/blob/main/LICENSE.txt)`
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// Licensed under the <LICENSE> license
+// function that returns the license section of README
 function renderLicenseSection(data, license) {
   if (license === 'none') {
     return ``;
@@ -27,6 +21,7 @@ function renderLicenseSection(data, license) {
   Licensed under the ${renderLicenseLink(data, license)} license`
 }
 
+// function that returns a screenshot or video
 function renderVisual(data) {
   if (!data.screenshot) {
     return ``;
@@ -34,7 +29,7 @@ function renderVisual(data) {
   return `![Demo](${data.screenshot})`
 }
 
-// TODO: Create a function to generate markdown for README
+// function to generates markdown for README
 function generateMarkdown(data) {
   let license = data.license;
   
